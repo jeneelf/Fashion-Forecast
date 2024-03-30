@@ -1,0 +1,149 @@
+body {
+    background: black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    height: 6px;
+    
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #93ffff;
+    border-radius: 10px;
+}
+
+#weather-container{
+    background-color: rgba(255, 255, 255, 0.32);
+    max-width: 450px;
+    margin-top: 20px;
+    overflow: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2, label,p{
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+input{
+    width: calc(100% - 16px);
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+button{
+    background: #b4f7f7;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100px;
+    font-size: 15px;
+}
+
+button:hover{
+    background: #24e6e6;
+}
+
+#temp-div p{
+    font-size: 60px;
+    margin-top: -30px;
+}
+
+#weather-info{
+    font-size: 20px
+}
+
+#weather-icon{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto 10px;
+    margin-bottom:0 ;
+    display: none;
+}
+
+#hourly-forecast{
+    margin-top: 50px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hourly-item{
+    flex: 0 0 auto;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+    margin-bottom: 15px;
+    color: white;
+
+}
+
+.hourly-item img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+#hourly-heading{
+    color: #fff;
+    margin-top: 10px;
+}
+
+#outfit-area {
+    display: none; /* Hide the outfit area by default */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+.outfit-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    display: inline-flex; /* Ensure the button behaves like a flex container */
+    align-items: center; /* Center contents vertically */
+    justify-content: center; /* Center contents horizontally */
+}
+  
+.outfit-button:hover {
+    transform: scale(1.1);
+    background: none;
+}
+  
+.outfit-button img {
+    width: 250px; /* Adjust size as needed */
+    height: 250px; /* Adjust size as needed */
+    border-radius: 10px;
+  }
+  
+
