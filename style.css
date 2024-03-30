@@ -1,12 +1,9 @@
 body {
     background: black;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family:Arial, Helvetica, sans-serif ;
     display: flex;
     justify-content: center;
     height: 100vh;
-    margin: 0;
-    position: relative;
-
 }
 
 ::-webkit-scrollbar{
@@ -27,8 +24,8 @@ body {
 #weather-container{
     background-color: rgba(255, 255, 255, 0.32);
     max-width: 450px;
-    margin-top: 20px;
-    overflow: auto;
+    align-self: center;
+    margin: auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
@@ -37,7 +34,15 @@ body {
     text-align: center;
 }
 
-h2, label,p{
+h2{
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    
+}
+
+label,p{
     color: #fff;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -48,8 +53,8 @@ input{
     width: calc(100% - 16px);
     padding: 8px;
     box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid white;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.372);
     margin-top: 20px;
 }
 
@@ -72,17 +77,23 @@ button:hover{
 
 #temp-div p{
     font-size: 60px;
-    margin-top: -30px;
+    margin-top: -20px;
+}
+#weather-text {
+    color: #fff;
+    margin-bottom: 0px;
+    font-size: 22px;
+
 }
 
 #weather-info{
-    font-size: 20px
+    font-size: 20px;
 }
 
 #weather-icon{
     width: 200px;
     height: 200px;
-    margin: 0 auto 10px;
+    margin: -20px auto 5px;
     margin-bottom:0 ;
     display: none;
 }

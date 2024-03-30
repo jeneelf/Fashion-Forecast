@@ -61,7 +61,8 @@ function displayWeather(data) {
 
     showImage(temperature);
 
-    document.getElementById("outfit-area").style.display = "flex"; // Show outfit area
+    document.getElementById("outfit-area").style.display = "flex";
+    document.getElementById("weather-text").style.display = "block"; //show hidden areas
   }
 }
 
@@ -88,19 +89,29 @@ function displayHourlyForecast(hourlyData) {
 
 function showImage(temperature) {
   let imageSrc;
+  let imageArray;
+
   if (temperature >= 0 && temperature <= 5) {
-    imageSrc = "very-cold.jpg"; // Image for very cold temperature
+    imageArray = ["very-cold1.jpg", "very-cold2.jpg", "very-cold3.jpg"]; // Array for very cold temperature
   } else if (temperature > 5 && temperature <= 10) {
-    imageSrc = "cold.jpg"; // Image for cold temperature
+    imageArray = ["cold1.jpg", "cold2.jpg", "cold3.jpg"]; // Array for cold temperature
   } else if (temperature > 10 && temperature <= 15) {
-    imageSrc = "moderate-cold.jpg"; // Image for moderate cold temperature
+    imageArray = [
+      "moderate-cold1.jpg",
+      "moderate-cold2.jpg",
+      "moderate-cold3.jpg",
+    ]; // Array for moderate cold temperature
   } else if (temperature > 15 && temperature <= 20) {
-    imageSrc = "moderate.jpg"; // Image for moderate temperature
+    imageArray = ["moderate1.jpg", "moderate2.jpg", "moderate3.jpg"]; // Array for moderate temperature
   } else if (temperature > 20 && temperature <= 25) {
-    imageSrc = "warm.jpg"; // Image for warm temperature
+    imageArray = ["warm1.jpg", "warm2.jpg", "warm3.jpg"]; // Array for warm temperature
   } else {
-    imageSrc = "hot.jpg"; // Image for hot temperature
+    imageArray = ["hot1.jpg", "hot2.jpg", "hot3.jpg"]; // Array for hot temperature
   }
+
+  // Pick a random image from the selected array
+  imageSrc = imageArray[Math.floor(Math.random() * imageArray.length)];
+
   const weatherIcon = document.getElementById("weather-icon");
   weatherIcon.style.display = "block";
   const outfitButtons = document.querySelectorAll(".outfit-button img");

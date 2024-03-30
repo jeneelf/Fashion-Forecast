@@ -9,17 +9,18 @@
 
   <body>
     <div id="weather-container">
-      <h2>Fashion Temp</h2>
-      <input type="text" id="city" placeholder="Enter city" />
+      <h2>Fashion Weather</h2>
+      <input type="text" id="city" placeholder=" Enter city" />
       <button onclick="getWeather()">Search</button>
-
+      <div id="weather-text" style="display: none">Current Weather</div>
       <img id="weather-icon" alt="Weather Icon" />
       <div id="temp-div"></div>
       <div id="weather-info"></div>
       <div id="hourly-forecast"></div>
+
       <div id="outfit-area">
         <button class="outfit-button">
-          <img src="" alt="Outfit 1" />
+          <img src="" alt="Outfit" />
         </button>
       </div>
     </div>
