@@ -1,6 +1,6 @@
 body {
     background: black;
-    font-family:Arial, Helvetica, sans-serif ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -33,6 +33,17 @@ body {
     border: 1px rgba(255, 255, 255, 0.1);
     text-align: center;
 }
+#unit-toggle-container {
+    background-color: rgba(255, 255, 255, 0.409);
+    border-radius: 15px;
+    padding: 5px;
+}
+#unit-toggle label {
+    display: inline-block;
+    justify-content: center;
+    margin: 0px; 
+    font-size: 15px;
+}
 
 h2{
     color: #fff;
@@ -50,17 +61,17 @@ label,p{
 }
 
 input{
-    width: calc(100% - 16px);
+    width: calc(100% - 5px);
     padding: 8px;
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.372);
     margin-top: 20px;
 }
 
 button{
     background: #b4f7f7;
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 10px;
     border: none;
     border-radius: 10px;

@@ -51,7 +51,7 @@ function displayWeather(data, units) {
     if (units === "metric") {
       temperature = Math.round(data.main.temp) + "°C";
     } else {
-      temperature = Math.round(1.8 * data.main.temp) + 32 + "°F";
+      temperature = Math.round(data.main.temp) + "°F";
     }
     const description = data.weather[0].description;
     const iconCode = data.weather[0].icon;
@@ -74,7 +74,7 @@ function displayWeather(data, units) {
 
 function displayHourlyForecast(hourlyData, units) {
   const hourlyForecastDiv = document.getElementById("hourly-forecast");
-  const next24Hours = hourlyData.slice(0, 8);
+  const next24Hours = hourlyData.slice(0, 12);
 
   next24Hours.forEach((item) => {
     const dateTime = new Date(item.dt * 1000);
@@ -83,7 +83,7 @@ function displayHourlyForecast(hourlyData, units) {
     if (units === "metric") {
       temperature = Math.round(item.main.temp) + "°C";
     } else {
-      temperature = Math.round((item.main.temp * 9) / 5 + 32) + "°F";
+      temperature = Math.round(item.main.temp) + "°F";
     }
     const iconCode = item.weather[0].icon;
     const iconURL = `https://openweathermap.org/img/wn/${iconCode}.png`;
