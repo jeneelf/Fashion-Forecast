@@ -10,6 +10,16 @@
   <body>
     <div id="weather-container">
       <h2>Fashion Weather</h2>
+      <div id="unit-toggle">
+        <label
+          ><input type="radio" name="units" value="metric" checked />
+          Celsius</label
+        >
+        <label
+          ><input type="radio" name="units" value="imperial" />
+          Fahrenheit</label
+        >
+      </div>
       <input type="text" id="city" placeholder=" Enter city" />
       <button onclick="getWeather()">Search</button>
       <div id="weather-text" style="display: none">Current Weather</div>
