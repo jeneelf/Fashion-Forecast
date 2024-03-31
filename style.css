@@ -3,9 +3,19 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+
+    flex-direction: column;
 }
 
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: auto; 
+    height: 100px; 
+    margin-bottom: 20px;
+}
+  
 ::-webkit-scrollbar{
     width: 10px;
     height: 6px;
@@ -25,8 +35,8 @@ body {
     background-color: rgba(255, 255, 255, 0.32);
     max-width: 450px;
     align-self: center;
-    margin: auto;
-    padding: 20px;
+    margin: 50px auto 20px; /* Adjust the top margin */
+    padding: 30px 20px; /* Adjust the padding */
     border-radius: 10px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
